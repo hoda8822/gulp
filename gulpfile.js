@@ -5,6 +5,7 @@ const autoprefixer = require('autoprefixer');
 const flexBugsFixes = require('postcss-flexbugs-fixes');
 const cssWring = require('csswring');
 const ejs = require("gulp-ejs");
+const pug = require( 'gulp-pug' );
 const rename = require('gulp-rename');
 const fs = require('fs');
 const imagemin = require('gulp-imagemin');
@@ -34,15 +35,12 @@ const postcssOption = [
   cssWring
 ]
 
+// scssをコンパイルするタスク
 gulp.task('sass', () => {
   return gulp.src('./src/scss/common.scss')
     .pipe(sass())
     .pipe(postcss(postcssOption))
     .pipe(gulp.dest('./dist'))
-})
-
-gulp.task('watch', () => {
-  return gulp.watch('./src/scss/**/*.scss',gulp.series('sass'))
 })
 
 // ejsをコンパイルするタスク
@@ -52,6 +50,14 @@ gulp.task('ejs', () => {
     .src('./src/html/*.ejs')
     .pipe(ejs({json:json}))//jsonの読み込み
     .pipe(rename({ extname: '.html' }))
+    .pipe(gulp.dest('./dist'))
+})
+
+// pugをコンパイルするタスク
+gulp.task('pug', () => {
+  return gulp
+    .src(['./src/html/*.pug', '!./src/html/_*pug'])
+    .pipe(pug({ pretty: true }))
     .pipe(gulp.dest('./dist'))
 })
 
@@ -75,13 +81,15 @@ gulp.task('watch', (done) => {
     done()
   }
 
-  gulp.watch('./dist/**/*',browserReload)
+  gulp.watch('./src/scss/**/*.scss',gulp.series('sass',browserReload))
+  gulp.watch('./src/html/**/*.ejs',gulp.series('ejs',browserReload))
+  gulp.watch('./src/html/**/*.pug',gulp.series('pug',browserReload))
 });
 
 gulp.task(
   'default',
   gulp.series(
-    gulp.parallel("ejs","sass"),
+    gulp.parallel("ejs","pug","sass"),
     gulp.parallel("serve","watch")
   )
 )
