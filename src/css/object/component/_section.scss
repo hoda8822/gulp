@@ -1,0 +1,19 @@
+.c-section-nl {
+  &:not(:first-child) {
+    margin-top: 80px;
+    @include l-mobile {
+      margin-top: 40px;
+      margin-top: cp(40, 80);
+    }
+  }
+}
+
+.c-section-xs {
+  &:not(:first-child) {
+    margin-top: 40px;
+    @include l-mobile {
+      margin-top: 20px;
+      margin-top: cp(20, 40);
+    }
+  }
+}

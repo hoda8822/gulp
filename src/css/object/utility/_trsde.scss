@@ -1,0 +1,17 @@
+.u-trsde {
+  @for $i from 1 through 20 {
+    @include l-more-than-mobile {
+      &-ct-#{$i * 5} {
+        transition-delay: $i * 0.05s;
+      }
+    }
+    @include l-mobile {
+      &-sp-#{$i * 5} {
+        transition-delay: $i * 0.05s;
+      }
+    }
+    &-#{$i * 5} {
+      transition-delay: $i * 0.05s;
+    }
+  }
+}

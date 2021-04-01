@@ -1,0 +1,45 @@
+.u-dn {
+  &-all {
+    display: none;
+  }
+  &-pc {
+    @include l-pc {
+      display: none;
+    }
+  }
+  &-pc-l {
+    @include l-pc-l {
+      display: none;
+    }
+  }
+  &-pc-s {
+    @include l-pc-s {
+      display: none;
+    }
+  }
+  &-tb {
+    @include l-tablet {
+      display: none;
+    }
+  }
+  &-tb-l {
+    @include l-tablet-l {
+      display: none;
+    }
+  }
+  &-tb-p {
+    @include l-tablet-p {
+      display: none;
+    }
+  }
+  &-ct {
+    @include l-more-than-mobile {
+      display: none;
+    }
+  }
+  &-sp {
+    @include l-mobile {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+meta(charset="utf-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+title タイトル
+meta(name="viewport", content="width=device-width")
+meta(name="description", content="")
+// Viewport Extra
+script(src="https://cdn.jsdelivr.net/npm/viewport-extra@1.0.4/dist/viewport-extra.min.js")
+script.
+  //- var ua = navigator.userAgent
+  //- var sp = (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0)
+  //- var agent = window.navigator.userAgent.toLowerCase();
+  //- var ipad = agent.indexOf('ipad') > -1 || agent.indexOf('macintosh') > -1 && 'ontouchend' in document;
+  //- var tab = (!sp && (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0  || ipad == true))
+  //- new ViewportExtra(tab ? 1024 : 375)
+  new ViewportExtra(375)
+
+// CSS
+link(rel="stylesheet" href="css/main.css")

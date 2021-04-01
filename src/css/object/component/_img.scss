@@ -1,0 +1,30 @@
+.c-img-w {
+  img {
+    width: 100%;
+  }
+}
+
+.c-img-c {
+  & > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.c-img-fit {
+  img {
+    object-fit: cover;
+  }
+}
+
+.c-img-zoom {
+  overflow: hidden;
+  img {
+    transition: transform 0.5s;
+  }
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+}

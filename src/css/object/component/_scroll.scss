@@ -1,0 +1,63 @@
+.c-scroll-in {
+  @include scroll-animation;
+}
+
+.c-scroll-up {
+  @include scroll-animation;
+  transform: translateY(50px);
+  @include print {
+    transform: translateY(0);
+  }
+  &.is-active {
+    transform: translateY(0);
+  }
+}
+
+.c-scroll-left {
+  @include scroll-animation;
+  transform: translateX(50px);
+  @include print {
+    transform: translateX(0);
+  }
+  &.is-active {
+    transform: translateX(0);
+  }
+}
+
+.c-scroll-right {
+  @include scroll-animation;
+  transform: translateX(-50px);
+  @include print {
+    transform: translateX(0);
+  }
+  &.is-active {
+    transform: translateX(0);
+  }
+}
+
+.c-scroll-white {
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: -1px;
+    z-index: 2;
+    background-color: c(white);
+    transition-property: transform;
+    transition-duration: 0.4s;
+    transition-timing-function: $easeInQuad;
+    transition-delay: 0.4s;
+    @include print {
+      display: none;
+    }
+  }
+  &.is-active {
+    &:before {
+      transform: translateX(100%);
+    }
+  }
+}

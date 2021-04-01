@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>タイトル</title>
+    <meta name="viewport" content="width=device-width">
     <meta name="description" content="">
-    <meta name="keywords" content="">
+    <!-- Viewport Extra-->
+    <script src="https://cdn.jsdelivr.net/npm/viewport-extra@1.0.4/dist/viewport-extra.min.js"></script>
+    <script>
+      //- var ua = navigator.userAgent
+      //- var sp = (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0)
+      //- var agent = window.navigator.userAgent.toLowerCase();
+      //- var ipad = agent.indexOf('ipad') > -1 || agent.indexOf('macintosh') > -1 && 'ontouchend' in document;
+      //- var tab = (!sp && (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0  || ipad == true))
+      //- new ViewportExtra(tab ? 1024 : 375)
+      new ViewportExtra(375)
+      
+    </script>
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <div id="content">
-      <div class="inner">
-        <p>こんにちは</p>
-      </div>
+    <!-- Start to define the global header.-->
+    <header class="l-header"></header>
+    <!-- End to define the global header.-->
+    <div class="l-contents">
+      <!-- Start to define the main content.-->
+      <main>
+        <h1>テスト</h1>
+        <p>テキスト</p>
+      </main>
+      <!-- End to define the main content.-->
     </div>
-    <script src="js/script.js"></script>
+    <!-- Start to define the global fotter.-->
+    <footer class="l-footer"></footer>
+    <!-- End to define the global fotter.-->
   </body>
 </html>

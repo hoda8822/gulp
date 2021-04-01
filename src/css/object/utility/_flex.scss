@@ -1,0 +1,229 @@
+.c-flex {
+  display: flex;
+}
+.c-flex-inline {
+  display: inline-flex;
+}
+.c-flex--wrap {
+  flex-wrap: wrap;
+}
+.c-flex--col-reverse {
+  flex-direction: column-reverse;
+}
+.c-flex--col {
+  flex-direction: column;
+}
+.c-flex--row-reverse {
+  flex-direction: row-reverse;
+}
+.c-flex--hr-end {
+  justify-content: flex-end;
+}
+.c-flex--hr-center {
+  justify-content: center;
+}
+.c-flex--hr-between {
+  justify-content: space-between;
+}
+.c-flex--hr-around {
+  justify-content: space-around;
+}
+.c-flex--vt-baseline {
+  align-items: baseline;
+}
+.c-flex--vt-start {
+  align-items: flex-start;
+}
+.c-flex--vt-end {
+  align-items: flex-end;
+}
+.c-flex--vt-center {
+  align-items: center;
+}
+@for $i from -1 through 10 {
+  .c-flex--order-#{$i} {
+    order: $i;
+  }
+}
+
+@include l-pc {
+  .c-flex-pc {
+    display: flex;
+  }
+  .c-flex-inline-pc {
+    display: inline-flex;
+  }
+  .c-flex--wrap-pc {
+    flex-wrap: wrap;
+  }
+  .c-flex--col-reverse-pc {
+    flex-direction: column-reverse;
+  }
+  .c-flex--col-pc {
+    flex-direction: column;
+  }
+  .c-flex--hr-end-pc {
+    justify-content: flex-end;
+  }
+  .c-flex--hr-center-pc {
+    justify-content: center;
+  }
+  .c-flex--hr-between-pc {
+    justify-content: space-between;
+  }
+  .c-flex--hr-around-pc {
+    justify-content: space-around;
+  }
+  .c-flex--vt-baseline {
+    align-items: baseline;
+  }
+  .c-flex--vt-start-pc {
+    align-items: flex-start;
+  }
+  .c-flex--vt-end-pc {
+    align-items: flex-end;
+  }
+  .c-flex--vt-center-pc {
+    align-items: center;
+  }
+  @for $i from -1 through 10 {
+    .c-flex--order-#{$i}-pc {
+      order: $i;
+    }
+  }
+}
+
+@include l-more-than-mobile {
+  .c-flex-ct {
+    display: flex;
+  }
+  .c-flex-inline-ct {
+    display: inline-flex;
+  }
+  .c-flex--wrap-ct {
+    flex-wrap: wrap;
+  }
+  .c-flex--row-reverse-ct {
+    flex-direction: row-reverse;
+  }
+  .c-flex--col-reverse-ct {
+    flex-direction: column-reverse;
+  }
+  .c-flex--col-ct {
+    flex-direction: column;
+  }
+  .c-flex--hr-end-ct {
+    justify-content: flex-end;
+  }
+  .c-flex--hr-center-ct {
+    justify-content: center;
+  }
+  .c-flex--hr-between-ct {
+    justify-content: space-between;
+  }
+  .c-flex--hr-around-ct {
+    justify-content: space-around;
+  }
+  .c-flex--vt-start-ct {
+    align-items: flex-start;
+  }
+  .c-flex--vt-baseline-ct {
+    align-items: baseline;
+  }
+  .c-flex--vt-end-ct {
+    align-items: flex-end;
+  }
+  .c-flex--vt-center-ct {
+    align-items: center;
+  }
+  @for $i from -1 through 10 {
+    .c-flex--order-#{$i}-ct {
+      order: $i;
+    }
+  }
+}
+
+@include l-tablet {
+  .c-flex-tb {
+    display: flex;
+  }
+  .c-flex-inline-tb {
+    display: inline-flex;
+  }
+  .c-flex--wrap-tb {
+    flex-wrap: wrap;
+  }
+  .c-flex--col-reverse-tb {
+    flex-direction: column-reverse;
+  }
+  .c-flex--col-tb {
+    flex-direction: column;
+  }
+  .c-flex--hr-end-tb {
+    justify-content: flex-end;
+  }
+  .c-flex--hr-center-tb {
+    justify-content: center;
+  }
+  .c-flex--hr-between-tb {
+    justify-content: space-between;
+  }
+  .c-flex--hr-around-tb {
+    justify-content: space-around;
+  }
+  .c-flex--vt-start-tb {
+    align-items: flex-start;
+  }
+  .c-flex--vt-end-tb {
+    align-items: flex-end;
+  }
+  .c-flex--vt-center-tb {
+    align-items: center;
+  }
+  @for $i from -1 through 10 {
+    .c-flex--order-#{$i}-tb {
+      order: $i;
+    }
+  }
+}
+
+@include l-mobile {
+  .c-flex-sp {
+    display: flex;
+  }
+  .c-flex--wrap-sp {
+    flex-wrap: wrap;
+  }
+  .c-flex--col-reverse-sp {
+    flex-direction: column-reverse;
+  }
+  .c-flex--col-sp {
+    flex-direction: column;
+  }
+  .c-flex--hr-end-sp {
+    justify-content: flex-end;
+  }
+  .c-flex--hr-center-sp {
+    justify-content: center;
+  }
+  .c-flex--hr-between-sp {
+    justify-content: space-between;
+  }
+  .c-flex--hr-around-sp {
+    justify-content: space-around;
+  }
+  .c-flex--vt-start-sp {
+    align-items: flex-start;
+  }
+  .c-flex--vt-end-sp {
+    align-items: flex-end;
+  }
+  .c-flex--vt-center-sp {
+    align-items: center;
+  }
+  @for $i from -1 through 10 {
+    .c-flex--order-#{$i}-sp {
+      order: $i;
+    }
+  }
+}

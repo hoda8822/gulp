@@ -1,0 +1,160 @@
+// ==========================================================================
+// size
+// ==========================================================================
+@mixin size($w, $h) {
+  height: $h;
+  width: $w;
+}
+// ==========================================================================
+// border
+// ==========================================================================
+@mixin border($width: 1px, $style: solid, $position: null, $radius: null) {
+  border-width: $width;
+  border#{$position}-style: $style;
+  border-radius: $radius;
+}
+// ==========================================================================
+// circle
+// ==========================================================================
+@mixin circle($size) {
+  @include size($size, $size);
+  border-radius: 50%;
+}
+// ==========================================================================
+// center
+// ==========================================================================
+@mixin center($t: 50%, $b: -50%, $l: 50%, $r: -50%) {
+  left: $l;
+  position: absolute;
+  top: $t;
+  transform: translate($r, $b);
+}
+@mixin center-w($position: absolute, $t: null, $b: null) {
+  bottom: $b;
+  left: 50%;
+  position: $position;
+  top: $t;
+  transform: translateX(-50%);
+}
+@mixin center-h($position: absolute, $r: null, $l: null) {
+  left: $l;
+  position: $position;
+  right: $r;
+  top: 50%;
+  transform: translateY(-50%);
+}
+// ==========================================================================
+// display
+// ==========================================================================
+@mixin element($content: "", $d: block) {
+  content: $content;
+  display: $d;
+}
+@mixin flex($jc: null, $ai: null, $w: null) {
+  display: flex;
+  align-items: $ai;
+  flex-wrap: $w;
+  justify-content: $jc;
+}
+@mixin inline-flex($jc: null, $ai: null, $w: null) {
+  display: inline-flex;
+  align-items: $ai;
+  flex-wrap: $w;
+  justify-content: $jc;
+}
+// ==========================================================================
+// position
+// ==========================================================================
+@mixin absolute($t: null, $r: null, $b: null, $l: null, $z: null) {
+  bottom: $b;
+  left: $l;
+  position: absolute;
+  right: $r;
+  top: $t;
+  z-index: $z;
+}
+@mixin absolute-wide($z: null) {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: $z;
+}
+// ==========================================================================
+// background
+// ==========================================================================
+@mixin bg-img($url, $size: contain) {
+  background-image: url(../images/#{$url});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+@mixin bg-font($content, $fw: 900) {
+  content: $content;
+  font-family: "Font Awesome 5 Free";
+  font-weight: $fw;
+}
+// ==========================================================================
+// hover
+// ==========================================================================
+@mixin hover-opacity {
+  @include l-more-than-mobile {
+    cursor: pointer;
+    transition: opacity 0.5s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+// ==========================================================================
+// font-size
+// ==========================================================================
+// font-size設定 sp 〜 tablet
+@mixin fs-sp($sizeSp, $sizeTb) {
+  @include l-mobile {
+    font-size: rem($sizeSp);
+    font-size: clamp(rem($sizeSp), vw($sizeTb, 750), rem($sizeTb));
+  }
+}
+
+// font-size設定 tablet ~ pc
+// @mixin fs-pc($sizeTb, $sizePc) {
+//   @include l-more-than-mobile {
+//     font-size: rem($sizeTb);
+//     font-size: clamp(rem($sizeTb), vw($sizePc,1366), rem($sizePc));
+//   }
+//   @include l-pc-l {
+//     font-size: rem($sizePc);
+//   }
+// }
+
+// ==========================================================================
+// scroll
+// ==========================================================================
+@mixin scroll-animation {
+  opacity: 0;
+  @include print {
+    opacity: 1;
+  }
+  &.is-active {
+    opacity: 1;
+    transition-duration: 1s;
+    transition-property: all;
+  }
+}
+
+// ==========================================================================
+// img
+// ==========================================================================
+@mixin img-cover {
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+  }
+}

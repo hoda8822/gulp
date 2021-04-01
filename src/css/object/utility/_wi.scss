@@ -1,0 +1,52 @@
+@for $i from 0 through 20 {
+  .u-w-#{$i*5} {
+    width: $i * 5#{"%"};
+  }
+  .u-mw-#{$i*5} {
+    max-width: $i * 5#{"%"};
+  }
+}
+
+@include l-pc {
+  @for $i from 0 through 20 {
+    .u-w-pc-#{$i*5} {
+      width: $i * 5#{"%"};
+    }
+    .u-mw-pc-#{$i*5} {
+      max-width: $i * 5#{"%"};
+    }
+  }
+}
+
+@include l-more-than-mobile {
+  @for $i from 0 through 20 {
+    .u-w-ct-#{$i*5} {
+      width: $i * 5#{"%"};
+    }
+    .u-mw-ct-#{$i*5} {
+      max-width: $i * 5#{"%"};
+    }
+  }
+}
+
+@include l-tablet {
+  @for $i from 0 through 20 {
+    .u-w-tb-#{$i*5} {
+      width: $i * 5#{"%"};
+    }
+    .u-mw-tb-#{$i*5} {
+      max-width: $i * 5#{"%"};
+    }
+  }
+}
+
+@include l-mobile {
+  @for $i from 0 through 20 {
+    .u-w-sp-#{$i*5} {
+      width: $i * 5#{"%"};
+    }
+    .u-mw-sp-#{$i*5} {
+      max-width: $i * 5#{"%"};
+    }
+  }
+}

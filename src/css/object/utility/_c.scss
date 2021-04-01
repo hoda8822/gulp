@@ -1,0 +1,53 @@
+@each $key, $value in $colors {
+  .u-c {
+    &-#{$key} {
+      color: $value;
+      &-pc {
+        @include l-pc {
+          color: $value;
+        }
+      }
+      &-ct {
+        @include l-more-than-mobile {
+          color: $value;
+        }
+      }
+      &-tb {
+        @include l-tablet {
+          color: $value;
+        }
+      }
+      &-sp {
+        @include l-mobile {
+          color: $value;
+        }
+      }
+    }
+  }
+
+  .u-bg {
+    &-#{$key} {
+      background-color: $value;
+      &-pc {
+        @include l-pc {
+          background-color: $value;
+        }
+      }
+      &-ct {
+        @include l-more-than-mobile {
+          background-color: $value;
+        }
+      }
+      &-tb {
+        @include l-tablet {
+          background-color: $value;
+        }
+      }
+      &-sp {
+        @include l-mobile {
+          background-color: $value;
+        }
+      }
+    }
+  }
+}

@@ -1,14 +1,10 @@
-doctype html
-html(lang='ja')
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', href='css/style.css')
-    title タイトル
-    meta(name='description', content='')
-    meta(name='keywords', content='')
-  body
-    #content
-      .inner
-        p こんにちは
-    script(src='js/script.js')
+extends ./_layout/_page.pug
+
+block contentFixedBefore
+
+block contentStatic
+  main
+    h1 テスト
+    p テキスト
+
+block contentFixedAfter

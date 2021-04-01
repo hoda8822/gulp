@@ -1,0 +1,254 @@
+.u-m {
+  &t {
+    @for $i from 0 through $count {
+      @include l-pc {
+        &-pc-#{$i * 5} {
+          margin-top: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-tablet {
+        &-tb-#{$i * 5} {
+          margin-top: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-more-than-mobile {
+        &-ct-#{$i * 5} {
+          margin-top: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-mobile {
+        &-sp-#{$i * 5} {
+          margin-top: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-mobile {
+        &-sp-vw-#{$i * 5} {
+          margin-top: floor(($i * 5) * 1px);
+          margin-top: cp(floor(($i * 5) * 1), floor(($i * 5) * 2));
+        }
+      }
+      &-#{$i * 5} {
+        margin-top: floor(($i * 5) * 1px);
+      }
+    }
+    &-a {
+      margin-top: auto;
+      &-pc {
+        @include l-pc {
+          margin-top: auto;
+        }
+      }
+      &-tb {
+        @include l-tablet {
+          margin-top: auto;
+        }
+      }
+      &-sp {
+        @include l-mobile {
+          margin-top: auto;
+        }
+      }
+      &-ct {
+        @include l-more-than-mobile {
+          margin-top: auto;
+        }
+      }
+    }
+  }
+  &b {
+    @for $i from 0 through $count {
+      @include l-pc {
+        &-pc-#{$i * 5} {
+          margin-bottom: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-tablet {
+        &-tb-#{$i * 5} {
+          margin-bottom: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-more-than-mobile {
+        &-ct-#{$i * 5} {
+          margin-bottom: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-mobile {
+        &-sp-#{$i * 5} {
+          margin-bottom: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-mobile {
+        &-sp-vw-#{$i * 5} {
+          margin-bottom: floor(($i * 5) * 1px);
+          margin-bottom: cp(floor(($i * 5) * 1), floor(($i * 5) * 2));
+        }
+      }
+      &-#{$i * 5} {
+        margin-bottom: floor(($i * 5) * 1px);
+      }
+    }
+    &-a {
+      margin-bottom: auto;
+      &-pc {
+        @include l-pc {
+          margin-bottom: auto;
+        }
+      }
+      &-tb {
+        @include l-tablet {
+          margin-bottom: auto;
+        }
+      }
+      &-sp {
+        @include l-mobile {
+          margin-bottom: auto;
+        }
+      }
+      &-ct {
+        @include l-more-than-mobile {
+          margin-bottom: auto;
+        }
+      }
+    }
+  }
+  &r {
+    @for $i from 0 through $count {
+      @include l-pc {
+        &-pc-#{$i * 5} {
+          margin-right: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-tablet {
+        &-tb-#{$i * 5} {
+          margin-right: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-more-than-mobile {
+        &-ct-#{$i * 5} {
+          margin-right: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-mobile {
+        &-sp-#{$i * 5} {
+          margin-right: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-mobile {
+        &-sp-vw-#{$i * 5} {
+          margin-right: floor(($i * 5) * 1px);
+          margin-right: cp(floor(($i * 5) * 1), floor(($i * 5) * 2));
+        }
+      }
+      &-#{$i * 5} {
+        margin-right: floor(($i * 5) * 1px);
+      }
+    }
+    &-a {
+      margin-right: auto;
+      &-pc {
+        @include l-pc {
+          margin-right: auto;
+        }
+      }
+      &-tb {
+        @include l-tablet {
+          margin-right: auto;
+        }
+      }
+      &-sp {
+        @include l-mobile {
+          margin-right: auto;
+        }
+      }
+      &-ct {
+        @include l-more-than-mobile {
+          margin-right: auto;
+        }
+      }
+    }
+  }
+  &l {
+    @for $i from 0 through $count {
+      @include l-pc {
+        &-pc-#{$i * 5} {
+          margin-left: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-tablet {
+        &-tb-#{$i * 5} {
+          margin-left: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-more-than-mobile {
+        &-ct-#{$i * 5} {
+          margin-left: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-mobile {
+        &-sp-#{$i * 5} {
+          margin-left: floor(($i * 5) * 1px);
+        }
+      }
+      @include l-mobile {
+        &-sp-vw-#{$i * 5} {
+          margin-left: floor(($i * 5) * 1px);
+          margin-left: cp(floor(($i * 5) * 1), floor(($i * 5) * 2));
+        }
+      }
+      &-#{$i * 5} {
+        margin-left: floor(($i * 5) * 1px);
+      }
+    }
+    &-a {
+      margin-left: auto;
+      &-pc {
+        @include l-pc {
+          margin-left: auto;
+        }
+      }
+      &-tb {
+        @include l-tablet {
+          margin-left: auto;
+        }
+      }
+      &-sp {
+        @include l-mobile {
+          margin-left: auto;
+        }
+      }
+      &-ct {
+        @include l-more-than-mobile {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  &-center {
+    margin-right: auto;
+    margin-left: auto;
+    &-pc {
+      @include l-pc {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    &-tb {
+      @include l-tablet {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    &-sp {
+      @include l-mobile {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    &-ct {
+      @include l-more-than-mobile {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+}

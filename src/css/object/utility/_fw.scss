@@ -1,0 +1,27 @@
+.u-fw {
+  @each $key, $value in $font-weights {
+    &-#{$key} {
+      font-weight: $value;
+    }
+    &-#{$key}-pc {
+      @include l-pc {
+        font-weight: $value;
+      }
+    }
+    &-#{$key}-ct {
+      @include l-more-than-mobile {
+        font-weight: $value;
+      }
+    }
+    &-#{$key}-tb {
+      @include l-tablet {
+        font-weight: $value;
+      }
+    }
+    &-#{$key}-sp {
+      @include l-mobile {
+        font-weight: $value;
+      }
+    }
+  }
+}

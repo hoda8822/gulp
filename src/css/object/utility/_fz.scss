@@ -1,0 +1,30 @@
+.u-fz {
+  @for $i from 10 through 100 {
+    &-#{$i} {
+      font-size: rem($i);
+    }
+    &-pc-#{$i} {
+      @include l-pc {
+        font-size: rem($i);
+      }
+    }
+    &-ct-#{$i} {
+      @include l-more-than-mobile {
+        font-size: rem($i);
+      }
+    }
+    &-tb-#{$i} {
+      @include l-tablet {
+        font-size: rem($i);
+      }
+    }
+    &-sp-#{$i} {
+      @include l-mobile {
+        font-size: rem($i);
+      }
+    }
+    &-sp-vw-#{$i} {
+      @include fs-sp($i, $i * 2);
+    }
+  }
+}
