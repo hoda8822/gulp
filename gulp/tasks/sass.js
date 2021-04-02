@@ -21,5 +21,5 @@ gulp.task('sass', () => {
     .pipe($.plumber())
     .pipe($.sass())
     .pipe($.postcss(postcssOption))
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest(conf.dest))
 })

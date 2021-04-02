@@ -16,5 +16,5 @@ gulp.task('imagemin', () => {
         $.imagemin.svgo(conf.opts.svgo)
         ])
     )
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest(conf.dest))
 });

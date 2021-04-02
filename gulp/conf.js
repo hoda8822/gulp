@@ -10,13 +10,15 @@ module.exports.sass = {
   src: [
     './src/**/*.{sass,scss}',
     '!./src/css/**/_*`.{sass,scss}'
-  ]
+  ],
+  dest: './dist/assets'
 }
 
 module.exports.imagemin = {
   src: [
     './src/**/*.{jpg,jpeg,png,gif,svg}'
   ],
+  dest: 'dist/assets/',
   opts: {
     pngquant: {
       quality: [0.8, 1.0],
@@ -36,6 +38,6 @@ module.exports.scripts = {
   mode: 'production', //本番用（開発ならdevelopment（圧縮されない））
   entry: './src/js/main.js',// エントリ-ポイント
   output: {
-    filename: './js/main.min.js',
+    filename: './assets/js/main.min.js',
   },
 }
