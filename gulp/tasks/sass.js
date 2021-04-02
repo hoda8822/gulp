@@ -1,6 +1,5 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
-const postcss = require('gulp-postcss');
+const $ = require("../plugins");
 const autoprefixer = require('autoprefixer');
 const flexBugsFixes = require('postcss-flexbugs-fixes');
 const cssWring = require('csswring');
@@ -19,7 +18,8 @@ const postcssOption = [
 gulp.task('sass', () => {
   return gulp
     .src(conf.src)
-    .pipe(sass())
-    .pipe(postcss(postcssOption))
+    .pipe($.plumber())
+    .pipe($.sass())
+    .pipe($.postcss(postcssOption))
     .pipe(gulp.dest('./dist'))
 })

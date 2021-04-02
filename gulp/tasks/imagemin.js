@@ -1,22 +1,20 @@
 const gulp = require('gulp');
-const imagemin = require('gulp-imagemin');
-const imageminPngquant = require('imagemin-pngquant');
-const imageminMozjpeg = require('imagemin-mozjpeg');
-const conf = require('../conf').imagemin;
+const pngquant = require('imagemin-pngquant');
+const mozjpeg = require('imagemin-mozjpeg');
 
-const imageminOption = [
-  imageminPngquant({ quality: [0.8, 1.0] }),
-  imageminMozjpeg({ quality: 80 }),
-  imagemin.gifsicle(),
-  imagemin.mozjpeg(),
-  imagemin.optipng(),
-  imagemin.svgo()
-]
+const $ = require("../plugins");
+const conf = require('../conf').imagemin;
 
 // 画像圧縮
 gulp.task('imagemin', () => {
   return gulp
     .src(conf.src)
-    .pipe(imagemin(imageminOption))
+    .pipe(
+      $.imagemin([
+        pngquant(conf.opts.pngquant),
+        mozjpeg(conf.opts.mozjpeg),
+        $.imagemin.svgo(conf.opts.svgo)
+        ])
+    )
     .pipe(gulp.dest('dist/images'))
 });

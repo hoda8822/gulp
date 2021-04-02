@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const pug = require('gulp-pug');
+const $ = require("../plugins");
 const conf = require('../conf').pug;
 
 
@@ -7,6 +7,6 @@ const conf = require('../conf').pug;
 gulp.task('pug', () => {
   return gulp
     .src(conf.src)
-    .pipe(pug({ pretty: true }))
+    .pipe($.pug({ pretty: true }))
     .pipe(gulp.dest('./dist'))
 })

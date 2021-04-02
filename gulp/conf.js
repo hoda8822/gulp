@@ -16,7 +16,20 @@ module.exports.sass = {
 module.exports.imagemin = {
   src: [
     './src/**/*.{jpg,jpeg,png,gif,svg}'
-  ]
+  ],
+  opts: {
+    pngquant: {
+      quality: [0.8, 1.0],
+      speed: 1
+    },
+    mozjpeg: {
+      quality: 75,
+      progresive: true,
+    },
+    svgo: {
+      plugins: [{ removeViewBox: false }, { cleanupIDs: true }],
+    },
+  }
 }
 
 module.exports.scripts = {

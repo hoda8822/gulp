@@ -1,2 +1,4 @@
 
-console.log("テスト");
+window.onload = () => {
+  console.log('成功!');
+}
